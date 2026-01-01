@@ -1,14 +1,14 @@
 # Explicitly mark all PHP files as PHP (prevents Hack misclassification)
 *.php linguist-language=PHP
 
-# Exclude vendor/third-party assets from language statistics
-web/assets/** linguist-vendored
-web/assets/** -linguist-detectable
-
-# Mark CSS files
+# Mark CSS files (keep in statistics)
 *.css linguist-language=CSS
 
-# Mark JavaScript files
+# Exclude only vendor JavaScript files from language statistics
+web/assets/js/** linguist-vendored
+web/assets/js/** -linguist-detectable
+
+# Mark JavaScript files (for non-vendor JS)
 *.js linguist-language=JavaScript
 
 # Mark HTML files
